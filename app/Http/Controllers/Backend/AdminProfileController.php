@@ -63,9 +63,21 @@ class AdminProfileController extends Controller
             $admin->password = Hash::make($request->password);
             $admin->save();
             Auth::logout();
-            return redirect()->route('admin.logout');
+            /* return redirect()->route('admin.logout'); */
+
+            $notification = array (
+                'message' => 'Admin Password Updated Successfully',
+                'alert-type' => 'success'
+            );
+
+            return redirect()->route('admin.logout')->with($notification);
+
         }else{
-            return redirect()->back();
+            $notification = array (
+                'message' => 'Admin Password Updated Fail, Try Again!',
+                'alert-type' => 'error'
+            );
+            return redirect()->back()->with($notification);
         }
     } // end method
 }
