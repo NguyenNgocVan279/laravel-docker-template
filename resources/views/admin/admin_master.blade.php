@@ -17,9 +17,9 @@
 	<link rel="stylesheet" href="{{ asset('backend/css/style.css') }}">
 	<link rel="stylesheet" href="{{ asset('backend/css/skin_color.css') }}">
 
-	<!--To display Toater Message - 20/06/2021 -->
-	<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" > -->
-	<!--End - To display Toater Message - 20/06/2021 -->
+	<!--To display Toater Message - 26/01//2021 -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+	<!--End - To display Toater Message - 26/01//2021 -->
      
   </head>
 
@@ -322,7 +322,7 @@
 	<script src="{{ asset('backend/js/pages/dashboard.js') }}"></script>
 
 	<!--To display Toater Message - 20/06/2021-->
-	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 	<script>
 	@if(Session::has('message'))
@@ -345,7 +345,7 @@
 		break; 
 	}
 	@endif 
-	</script> -->
+	</script>
     <!-- End - To display Toater Message - 20/06/2021 -->
 	
 	
