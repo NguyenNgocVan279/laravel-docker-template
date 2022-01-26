@@ -18,9 +18,9 @@ use App\Http\Controllers\Frontend\IndexController;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
-});
+}); */
 
 
 ////////////////////////
@@ -58,7 +58,7 @@ Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function 
     return view('dashboard', compact('user'));
 })->name('dashboard');
 
-/* Route::get('/', [IndexController::class, 'index']);
+Route::get('/', [IndexController::class, 'index']);
 
 Route::get('/user/logout', [IndexController::class, 'UserLogout'])->name('user.logout');
 
@@ -68,7 +68,7 @@ Route::post('/user/profile/store', [IndexController::class, 'UserProfileStore'])
 
 Route::get('/user/change/password', [IndexController::class, 'UserChangePassword'])->name('change.password');
 
-Route::post('/user/password/update', [IndexController::class, 'UserPasswordUpdate'])->name('user.password.update'); */
+Route::post('/user/password/update', [IndexController::class, 'UserPasswordUpdate'])->name('user.password.update');
 
 
 
