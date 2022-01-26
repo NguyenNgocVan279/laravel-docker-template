@@ -18,6 +18,13 @@ use App\Http\Controllers\Frontend\IndexController;
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
+////////////////////////
+
 Route::group(['prefix'=> 'admin', 'middleware'=>['admin:admin']], function() {
     Route::get('/login', [AdminController::class, 'loginForm']);
     Route::post('/login', [AdminController::class, 'store'])->name('admin.login');
@@ -45,13 +52,13 @@ Route::post('/update/change/password', [AdminProfileController::class, 'AdminUpd
 
 
 // Frontend All Routes
-/* Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function () {
+Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function () {
     $id = Auth::user()->id;
     $user = User::find($id);
     return view('dashboard', compact('user'));
 })->name('dashboard');
 
-Route::get('/', [IndexController::class, 'index']);
+/* Route::get('/', [IndexController::class, 'index']);
 
 Route::get('/user/logout', [IndexController::class, 'UserLogout'])->name('user.logout');
 
@@ -61,8 +68,8 @@ Route::post('/user/profile/store', [IndexController::class, 'UserProfileStore'])
 
 Route::get('/user/change/password', [IndexController::class, 'UserChangePassword'])->name('change.password');
 
-Route::post('/user/password/update', [IndexController::class, 'UserPasswordUpdate'])->name('user.password.update');
- */
+Route::post('/user/password/update', [IndexController::class, 'UserPasswordUpdate'])->name('user.password.update'); */
+
 
 
 /*
